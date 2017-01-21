@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyCodingLayout</string>
+    <string name="application_name">thePos</string>
+    <string name="application_desc">Run and glow your bussiness</string>
 </resources>
