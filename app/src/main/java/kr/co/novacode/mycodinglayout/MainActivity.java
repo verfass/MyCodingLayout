@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         topLayout.setOrientation(LinearLayout.VERTICAL);
         topLayout.setBackgroundColor(R.color.colorBackBlue);
         topLayout.setLayoutParams(params);
-        mainLayout.addView(topLayout);
+
 
         //상단 레이아웃 > 이미지 로고 구현
         ImageView logoImageView = new ImageView(this);
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         params.topMargin = 110;
         logoImageView.setImageResource(R.drawable.square_logo);
         logoImageView.setLayoutParams(params);
-        topLayout.addView(logoImageView);
+
 
         // 상단 레이아웃 > 어플명 구현
         TextView titleTextView = new TextView(this);
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         titleTextView.setTextSize(70);
         titleTextView.setTextColor(R.color.colorFontWhite);
         titleTextView.setLayoutParams(params);
-        topLayout.addView(titleTextView);
+
 
         // 상단 레이아웃 > 어플 설명
         TextView descTextView = new TextView(this);
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         descTextView.setTextSize(30);
         descTextView.setTextColor(R.color.colorFontWhite);
         descTextView.setLayoutParams(params);
-        topLayout.addView(descTextView);
+
 
         // 하단 레이아웃 생성
         LinearLayout bottomLayout = new LinearLayout(this);
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         bottomLayout.setOrientation(LinearLayout.VERTICAL);
         bottomLayout.setBackgroundColor(R.color.colorBackWhite);
         bottomLayout.setLayoutParams(params);
-        mainLayout.addView(bottomLayout);
+
 
         // 하단 레이아웃 버튼01
         Button button01 = new Button(this);
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         button01.setPadding(15, 15, 15, 15);
         button01.setAllCaps(false);
         button01.setLayoutParams(params);
-        bottomLayout.addView(button01);
+
 
         // 하단 레이아웃 버튼02
         Button button02 = new Button(this);
@@ -125,7 +124,20 @@ public class MainActivity extends AppCompatActivity {
         button02.setPadding(15, 15, 15, 15);
         button02.setAllCaps(false);
         button02.setLayoutParams(params);
+
+
+
+
+        topLayout.addView(logoImageView);
+        topLayout.addView(titleTextView);
+        topLayout.addView(descTextView);
+        mainLayout.addView(topLayout);
+
+        bottomLayout.addView(button01);
         bottomLayout.addView(button02);
+        mainLayout.addView(bottomLayout);
+
+
 
     }
 }
